@@ -13,32 +13,36 @@
     "categories": [
         "Programming Languages"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wvpv/ampscript-syntax-highlighter-vscode.git"
+    },
     "contributes": {
         "languages": [{
             "id": "ampscript",
             "aliases": ["AMPscript", "ampscript"],
             "extensions": [".amp",".ampscript"],
             "configuration": "./language-configuration.json"
-            }],
-            "grammars": [
-                {
-                    "language": "ampscript",
-                    "scopeName": "text.html.ampscript",
-                    "injectTo": [
-                        "text.html.basic",
-                        "meta.embedded.block.html",
-                        "meta.block.js",
-                        "source.js"
-                    ],                
-                    "path": "./syntaxes/AMPscript Syntax Highlighter (HTML).json"
-                }         
-            ],
-            "themes": [
-                {
-                    "label": "wvpv-dark",
-                    "uiTheme": "vs-dark",
-                    "path": "./themes/wvpv-dark.json"
-                }
-            ]
-        }
+        }],
+        "grammars": [
+            {
+                "language": "ampscript",
+                "scopeName": "text.html.ampscript",
+                "injectTo": [
+                    "text.html.basic",
+                    "meta.embedded.block.html",
+                    "meta.block.js",
+                    "source.js"
+                ],
+                "path": "./syntaxes/AMPscript Syntax Highlighter (HTML).json"
+            }
+        ],
+        "themes": [
+            {
+                "label": "wvpv-dark",
+                "uiTheme": "vs-dark",
+                "path": "./themes/wvpv-dark.json"
+            }
+        ]
     }
+}
