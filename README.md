@@ -1,6 +1,6 @@
 # AMPSCRIPT SYNTAX HIGHLIGHTER
 
-A Salesforce Marketing Cloud AMPscript syntax highlighter for Sublime Text.
+A Salesforce Marketing Cloud AMPscript syntax highlighter for Visual Studio Code.
 
 ## Features
 
@@ -28,8 +28,6 @@ A Salesforce Marketing Cloud AMPscript syntax highlighter for Sublime Text.
 
 ## Release Notes
 
-### 1.0.0
-
 Initial release
 
-### 1.0.1
+### 0.0.1
