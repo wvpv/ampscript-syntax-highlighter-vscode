@@ -1,2 +1,35 @@
-# ampscript-syntax-highlighter-vscode
-AMPscript syntax highlighter for VSCode
+# AMPSCRIPT SYNTAX HIGHLIGHTER
+
+A Salesforce Marketing Cloud AMPscript syntax highlighter for Sublime Text.
+
+## Features
+
+- Identifies the following AMPscript syntax:
+    - code blocks
+    - inline code
+    - functions
+    - language control elements -- conditionals, loops, variable declarations and assignments, operators
+    - numbers
+    - strings
+    - system strings -- block and inline
+    - variables
+    - comments
+    - constants
+- Supports all 148 AMPscript functions
+- Parses the majority of the system substitution strings
+- Highlights both AMPscript block types: `%%[` `]%%` and `<script runat="server" language="ampscript">` `</script>`
+- Inherits base HTML syntax highlighting (`text.html.basic`)
+
+## Requirements
+
+## Extension Settings
+
+## Known Issues
+
+## Release Notes
+
+### 1.0.0
+
+Initial release
+
+### 1.0.1

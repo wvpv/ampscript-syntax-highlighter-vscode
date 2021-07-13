@@ -1,0 +1,44 @@
+{
+    "name": "ampscript",
+    "displayName": "AMPscript Syntax Highlighter (HTML)",
+    "version": "0.0.1",
+    "author": {
+        "name": "Adam Spriggs",
+        "email": "wvpv@spmvs.com"
+    },    
+    "publisher": "wvpv",    
+    "engines": {
+        "vscode": "^1.56.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "ampscript",
+            "aliases": ["AMPscript", "ampscript"],
+            "extensions": [".amp",".ampscript"],
+            "configuration": "./language-configuration.json"
+            }],
+            "grammars": [
+                {
+                    "language": "ampscript",
+                    "scopeName": "text.html.ampscript",
+                    "injectTo": [
+                        "text.html.basic",
+                        "meta.embedded.block.html",
+                        "meta.block.js",
+                        "source.js"
+                    ],                
+                    "path": "./syntaxes/AMPscript Syntax Highlighter (HTML).json"
+                }         
+            ],
+            "themes": [
+                {
+                    "label": "wvpv-dark",
+                    "uiTheme": "vs-dark",
+                    "path": "./themes/wvpv-dark.json"
+                }
+            ]
+        }
+    }
