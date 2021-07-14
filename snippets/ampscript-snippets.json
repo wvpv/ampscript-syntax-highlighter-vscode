@@ -6,7 +6,7 @@
 			"\t$1",
 			"\n</script>"
 		],
-		"description": "Output a long-form AMPscript code block"
+		"description": "Output a long-form AMPscriptcode block"
 	}
 	
 }
