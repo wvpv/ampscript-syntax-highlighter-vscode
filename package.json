@@ -1,12 +1,12 @@
 {
     "name": "ampscript-syntax-highlighter-vscode",
     "displayName": "AMPscript Syntax Highlighter (HTML)",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": {
         "name": "Adam Spriggs",
         "email": "wvpv@spmvs.com"
-    },    
-    "publisher": "wvpv",    
+    },
+    "publisher": "wvpv",
     "engines": {
         "vscode": "^1.56.0"
     },
@@ -18,12 +18,20 @@
         "url": "https://github.com/wvpv/ampscript-syntax-highlighter-vscode.git"
     },
     "contributes": {
-        "languages": [{
-            "id": "ampscript",
-            "aliases": ["AMPscript", "ampscript"],
-            "extensions": [".amp",".ampscript"],
-            "configuration": "./language-configuration.json"
-        }],
+        "languages": [
+            {
+                "id": "ampscript",
+                "aliases": [
+                    "AMPscript",
+                    "ampscript"
+                ],
+                "extensions": [
+                    ".amp",
+                    ".ampscript"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
         "grammars": [
             {
                 "language": "ampscript",
@@ -43,6 +51,12 @@
                 "uiTheme": "vs-dark",
                 "path": "./themes/wvpv-dark.json"
             }
-        ]
+        ],
+        "snippets": [
+            {
+                "language": "ampscript",
+                "path": "./snippets/ampscript-snippets.json"
+            }
+        ]		
     }
 }

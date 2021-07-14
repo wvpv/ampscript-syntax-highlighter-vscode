@@ -23,11 +23,3 @@ A Salesforce Marketing Cloud AMPscript syntax highlighter for Visual Studio Code
 ## Requirements
 
 ## Extension Settings
-
-## Known Issues
-
-## Release Notes
-
-Initial release
-
-### 0.0.1

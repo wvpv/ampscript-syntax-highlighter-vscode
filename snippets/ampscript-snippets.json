@@ -1,0 +1,12 @@
+{
+	"AMPscript long-form code block": {
+		"prefix": "%%L",
+		"body": [
+			"<script runat=\"server\" language=\"ampscript\">\n",
+			"\t$1",
+			"\n</script>"
+		],
+		"description": "Output a long-form AMPscript code block"
+	}
+	
+}
