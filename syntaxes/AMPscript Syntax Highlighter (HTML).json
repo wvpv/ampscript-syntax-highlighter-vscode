@@ -4,12 +4,12 @@
         "amp",
         "AMPscript"
     ],
-    "scopeName": "text.html.ampscript", 
+    "scopeName": "text.html.ampscript",
     "version": "1.0.0",
     "injectionSelector": "L:text.html L:meta.jsx.children.js L:meta.tag.js L:meta.jsx.children.js L:meta.tag.js L:meta.jsx.children.js L:meta.tag.without-attributes.js L:meta.jsx.children.js L:meta.tag.js L:meta.block.js L:source.js L:meta.embedded.block.html",
     "keyEquivalent": "^~A",
     "foldingStopMarker": "(</(?i:(head|table|div|style|script|ul|ol|form|dl))>|\\})",
-    "foldingStartMarker": "(<(?i:(head|table|div|style|script|ul|ol|form|dl))\\b.*?>|\\{)", 
+    "foldingStartMarker": "(<(?i:(head|table|div|style|script|ul|ol|form|dl))\\b.*?>|\\{)",
     "patterns": [
         {
             "include": "#ampscript-block"
@@ -37,193 +37,193 @@
         "ampscript-system-strings-block": {
             "patterns": [
                 {
-                    "match": "(?i:MSG\\(0\\)\\.NOUNS|MSG\\(0\\)\\.VERB|MSG\\(0\\)\\.NOUN\\([0-9]\\)|MSG\\(0\\)|MMS_CONTENT_URL\\([0-9]\\)|TEXT\\.NOUN\\([0-9]\\)|TEXT\\.NOUN|STKR\\.STKPKGID|STKR\\.STKID|STKR\\.STKTXT)", 
+                    "match": "(?i:MSG\\(0\\)\\.NOUNS|MSG\\(0\\)\\.VERB|MSG\\(0\\)\\.NOUN\\([0-9]\\)|MSG\\(0\\)|MMS_CONTENT_URL\\([0-9]\\)|TEXT\\.NOUN\\([0-9]\\)|TEXT\\.NOUN|STKR\\.STKPKGID|STKR\\.STKID|STKR\\.STKTXT)",
                     "name": "constant.language"
-                }, 
+                },
                 {
-                    "match": "\\b(?i:__additionalemailattribute[\\d]|_datasourcename|_emailid|_impressionregionid|_impressionregionname|_istestsend|_jobsubscriberbatchid|_listname|_messagecontext|_messagetypepreference|_preheader|_replycontent|_subscriberkey|additionalinfo_|double_opt_in_url|emailaddr|emailname_|firstname_|firstname|firstn|ftaf_url|jobid|lastname|lastname_|line_address_id|line_job_id|line_subscriber_id|linkname|list_|listid|listsubid|member_addr|member_busname|member_city|member_country|member_postalcode|member_state|memberid|microsite_base_url|mobile_number|msg|pageurl|profile_center_url|replyemailaddress|replyname|short_code|subscriberid|subscription_center_url|unsub_center_url|view_email_url|xtdayofweek|xtday|xtlongdate|xtmonthnumeric|xtmonth|xtshortdate|xtyear|_RMM_Headers|_RMM_ReplyBodyText|_RMM_ReplyBodyHTML|_RMM_ReplySubject|_RMM_JobID|_RMM_ListID|_RMM_BatchID|_RMM_SubscriberID|_RMM_RecipientEmailAddress|_RMM_RecipientSubscriberKey|_CarrierID|_Channel|_City|_ContactID|_CountryCode|_CreatedBy|_CreatedDate|_FirstName|_IsHonorDST|_LastName|_MobileNumber|_ModifiedBy|_ModifiedDate|_Priority|_Source|_SourceObjectID|_State|_Status|_UTCOffset|_ZipCode|TEXT|VERB|MMS_CONTENT_URL)\\b", 
+                    "match": "\\b(?i:__additionalemailattribute[\\d]|_datasourcename|_emailid|_impressionregionid|_impressionregionname|_istestsend|_jobsubscriberbatchid|_listname|_messagecontext|_messagetypepreference|_preheader|_replycontent|_subscriberkey|additionalinfo_|double_opt_in_url|emailaddr|emailname_|firstname_|firstname|firstn|ftaf_url|jobid|lastname|lastname_|line_address_id|line_job_id|line_subscriber_id|linkname|list_|listid|listsubid|member_addr|member_busname|member_city|member_country|member_postalcode|member_state|memberid|microsite_base_url|mobile_number|msg|pageurl|profile_center_url|replyemailaddress|replyname|short_code|subscriberid|subscription_center_url|unsub_center_url|view_email_url|xtdayofweek|xtday|xtlongdate|xtmonthnumeric|xtmonth|xtshortdate|xtyear|_RMM_Headers|_RMM_ReplyBodyText|_RMM_ReplyBodyHTML|_RMM_ReplySubject|_RMM_JobID|_RMM_ListID|_RMM_BatchID|_RMM_SubscriberID|_RMM_RecipientEmailAddress|_RMM_RecipientSubscriberKey|_CarrierID|_Channel|_City|_ContactID|_CountryCode|_CreatedBy|_CreatedDate|_FirstName|_IsHonorDST|_LastName|_MobileNumber|_ModifiedBy|_ModifiedDate|_Priority|_Source|_SourceObjectID|_State|_Status|_UTCOffset|_ZipCode|TEXT|VERB|MMS_CONTENT_URL)\\b",
                     "name": "constant.language"
                 }
             ]
-        }, 
+        },
         "ampscript-numbers": {
-            "match": "\\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\b", 
+            "match": "\\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\b",
             "name": "constant.numeric.ampscript"
-        }, 
+        },
         "ampscript-block": {
             "beginCaptures": {
                 "0": {
                     "name": "meta.embedded.block.ampscript"
                 }
-            }, 
-            "begin": "(%%\\[|<script\\s{0,}runat=[\"']{0,1}server[\"']{0,1}\\slanguage=[\"']{0,1}ampscript[\"']{0,1}>)", 
+            },
+            "begin": "(%%\\[|<script\\s{0,}runat=[\"']{0,1}server[\"']{0,1}\\slanguage=[\"']{0,1}ampscript[\"']{0,1}>)",
             "patterns": [
                 {
                     "include": "#ampscript-comments"
-                }, 
+                },
                 {
                     "include": "#ampscript-system-strings-block"
-                }, 
+                },
                 {
                     "include": "#ampscript-constants"
-                }, 
+                },
                 {
                     "include": "#ampscript-strings"
-                }, 
+                },
                 {
                     "include": "#ampscript-numbers"
-                }, 
+                },
                 {
                     "include": "#ampscript-functions"
-                }, 
+                },
                 {
                     "include": "#ampscript-variables"
-                }, 
+                },
                 {
                     "include": "#ampscript-language-elements"
                 }
-            ], 
-            "end": "\\]%%|</script>", 
+            ],
+            "end": "\\]%%|</script>",
             "endCaptures": {
                 "0": {
                     "name": "meta.embedded.block.ampscript"
                 }
-            }, 
+            },
             "name": "source.ampscript"
-        }, 
+        },
         "ampscript-comments": {
-            "begin": "/\\*", 
+            "begin": "/\\*",
             "captures": {
                 "0": {
                     "name": "punctuation.definition.comment.ampscript"
                 }
-            }, 
-            "comment": "Comments", 
-            "end": "\\*/", 
+            },
+            "comment": "Comments",
+            "end": "\\*/",
             "name": "comment.block.ampscript"
-        }, 
+        },
         "ampscript-strings": {
             "patterns": [
                 {
-                    "match": "([\"](.*?)[\"]|'(.*?)')", 
+                    "match": "([\"](.*?)[\"]|'(.*?)')",
                     "name": "string.quoted.ampscript"
                 }
             ]
-        }, 
+        },
         "ampscript-constants": {
             "patterns": [
                 {
-                    "match": "((?i:true|false|null)\\b)", 
+                    "match": "((?i:true|false|null)\\b)",
                     "name": "constant.language"
                 }
             ]
-        }, 
+        },
         "ampscript-language-elements": {
             "patterns": [
                 {
-                    "match": "(\\b(?i:if|then|elseif|else|endif)\\b)", 
-                    "comment": "Conditional", 
+                    "match": "(\\b(?i:if|then|elseif|else|endif)\\b)",
+                    "comment": "Conditional",
                     "name": "keyword.control.conditional.ampscript"
-                }, 
+                },
                 {
-                    "match": "(\\b(?i:for|to|downto|do|next)\\b)", 
-                    "comment": "Loop", 
+                    "match": "(\\b(?i:for|to|downto|do|next)\\b)",
+                    "comment": "Loop",
                     "name": "keyword.control.ampscript"
-                }, 
+                },
                 {
-                    "match": "(\\b(?i:var|set)\\b)", 
-                    "comment": "Variable declaration and assignment", 
+                    "match": "(\\b(?i:var|set)\\b)",
+                    "comment": "Variable declaration and assignment",
                     "name": "storage.type.ampscript"
-                }, 
+                },
                 {
-                    "match": "(?i:=|\\,|==|==|!=|>|<|>=|<=|(AND|OR|NOT))", 
-                    "comment": "Operators", 
+                    "match": "(?i:=|\\,|==|==|!=|>|<|>=|<=|(AND|OR|NOT))",
+                    "comment": "Operators",
                     "name": "keyword.operator.ampscript"
                 }
             ]
-        }, 
+        },
         "ampscript-system-strings-inline": {
             "patterns": [
                 {
-                    "match": "%%(?i:MSG\\(0\\)\\.NOUNS|MSG\\(0\\)\\.VERB|MSG\\(0\\)\\.NOUN\\([0-9]\\)|MSG\\(0\\)|MMS_CONTENT_URL\\([0-9]\\)|TEXT\\.NOUN\\([0-9]\\)|TEXT\\.NOUN|STKR\\.STKPKGID|STKR\\.STKID|STKR\\.STKTXT|microsite_base_url\\[default\\](.*?)\\[/default\\])%%", 
+                    "match": "%%(?i:MSG\\(0\\)\\.NOUNS|MSG\\(0\\)\\.VERB|MSG\\(0\\)\\.NOUN\\([0-9]\\)|MSG\\(0\\)|MMS_CONTENT_URL\\([0-9]\\)|TEXT\\.NOUN\\([0-9]\\)|TEXT\\.NOUN|STKR\\.STKPKGID|STKR\\.STKID|STKR\\.STKTXT|microsite_base_url\\[default\\](.*?)\\[/default\\])%%",
                     "name": "constant.language"
-                }, 
+                },
                 {
-                    "match": "%%(?i:__additionalemailattribute[\\d]|_datasourcename|_emailid|_impressionregionid|_impressionregionname|_istestsend|_jobsubscriberbatchid|_listname|_messagecontext|_messagetypepreference|_preheader|_replycontent|_subscriberkey|additionalinfo_|double_opt_in_url|emailaddr|emailname_|firstname_|firstname|firstn|ftaf_url|jobid|lastname|lastname_|line_address_id|line_job_id|line_subscriber_id|linkname|list_|listid|listsubid|member_addr|member_busname|member_city|member_country|member_postalcode|member_state|memberid|microsite_base_url|mobile_number|msg|pageurl|profile_center_url|replyemailaddress|replyname|short_code|subscriberid|subscription_center_url|unsub_center_url|view_email_url|xtdayofweek|xtday|xtlongdate|xtmonthnumeric|xtmonth|xtshortdate|xtyear|_RMM_Headers|_RMM_ReplyBodyText|_RMM_ReplyBodyHTML|_RMM_ReplySubject|_RMM_JobID|_RMM_ListID|_RMM_BatchID|_RMM_SubscriberID|_RMM_RecipientEmailAddress|_RMM_RecipientSubscriberKey|_CarrierID|_Channel|_City|_ContactID|_CountryCode|_CreatedBy|_CreatedDate|_FirstName|_IsHonorDST|_LastName|_MobileNumber|_ModifiedBy|_ModifiedDate|_Priority|_Source|_SourceObjectID|_State|_Status|_UTCOffset|_ZipCode|TEXT|VERB|MMS_CONTENT_URL)%%", 
+                    "match": "%%(?i:__additionalemailattribute[\\d]|_datasourcename|_emailid|_impressionregionid|_impressionregionname|_istestsend|_jobsubscriberbatchid|_listname|_messagecontext|_messagetypepreference|_preheader|_replycontent|_subscriberkey|additionalinfo_|double_opt_in_url|emailaddr|emailname_|firstname_|firstname|firstn|ftaf_url|jobid|lastname|lastname_|line_address_id|line_job_id|line_subscriber_id|linkname|list_|listid|listsubid|member_addr|member_busname|member_city|member_country|member_postalcode|member_state|memberid|microsite_base_url|mobile_number|msg|pageurl|profile_center_url|replyemailaddress|replyname|short_code|subscriberid|subscription_center_url|unsub_center_url|view_email_url|xtdayofweek|xtday|xtlongdate|xtmonthnumeric|xtmonth|xtshortdate|xtyear|_RMM_Headers|_RMM_ReplyBodyText|_RMM_ReplyBodyHTML|_RMM_ReplySubject|_RMM_JobID|_RMM_ListID|_RMM_BatchID|_RMM_SubscriberID|_RMM_RecipientEmailAddress|_RMM_RecipientSubscriberKey|_CarrierID|_Channel|_City|_ContactID|_CountryCode|_CreatedBy|_CreatedDate|_FirstName|_IsHonorDST|_LastName|_MobileNumber|_ModifiedBy|_ModifiedDate|_Priority|_Source|_SourceObjectID|_State|_Status|_UTCOffset|_ZipCode|TEXT|VERB|MMS_CONTENT_URL)%%",
                     "name": "constant.language"
                 }
             ]
-        }, 
+        },
         "ampscript-functions": {
             "beginCaptures": {
                 "0": {
                     "name": "support.function.ampscript"
                 }
-            }, 
-            "begin": "(?i:Add|AddMSCRMListMember|AddObjectArrayItem|AttachFile|AttributeValue|AuthenticatedEmployeeID|AuthenticatedEmployeeNotificationAddress|AuthenticatedEmployeeUserName|AuthenticatedEnterpriseID|AuthenticatedMemberID|AuthenticatedMemberName|BarCodeURL|Base64Decode|Base64Encode|BeginImpressionRegion|BuildOptionList|BuildRowSetFromString|BuildRowSetFromXML|Char|ClaimRow|ClaimRowValue|CloudPagesURL|Concat|ContentArea|ContentAreaByName|ContentBlockbyId|ContentBlockbyKey|ContentBlockbyName|ContentImagebyID|ContentImagebyKey|CreateMSCRMRecord|CreateObject|CreateSalesforceObject|CreateSmsConversation|DataExtensionRowCount|DateAdd|DateDiff|DateParse|DatePart|DecryptSymmetric|DeleteData|DeleteDE|DescribeMSCRMEntities|DescribeMSCRMEntityAttributes|Divide|Domain|Empty|EncryptSymmetric|EndImpressionRegion|EndSmsConversation|ExecuteFilter|ExecuteFilterOrderedRows|Field|Format|FormatCurrency|FormatDate|FormatNumber|GetSendTime|GetPortfolioItem|GetPublishedSocialContent|GetSocialPublishURL|GetSocialPublishURLByName|GetValue|GUID|HTTPGet|HTTPPost|HTTPPost2|HTTPRequestHeader|IIf|Image|IndexOf|InsertData|InsertDE|InvokeCreate|InvokeDelete|InvokeExecute|InvokePerform|InvokeRetrieve|InvokeUpdate|IsCHTMLBrowser|IsEmailAddress|IsNull|IsNullDefault|IsPhoneNumber|Length|LiveContentMicrositeURL|LocalDateToSystemDate|LongSFID|Lookup|LookupOrderedRows|LookupOrderedRowsCS|LookupRows|LookupRowsCS|Lowercase|MD5|MicrositeURL|Mod|Multiply|Now|Output|OutputLine|ProperCase|QueryParameter|RaiseError|Random|RatingStars|Redirect|RedirectTo|RegExMatch|Replace|ReplaceList|RequestParameter|RetrieveMSCRMRecords|RetrieveMSCRMRecordsFetchXML|RetrieveSalesforceJobSources|RetrieveSalesforceObjects|Row|RowCount|SetObjectProperty|SetSmsConversationNextKeyword|SetStateMSCRMRecord|SetValue|SHA1|SHA256|SHA512|StringToDate|StringToHex|Substring|Subtract|SystemDateToLocalDate|TransformXML|TreatAsContent|TreatAsContentArea|Trim|UpdateData|UpdateDE|UpdateMSCRMRecords|UpdateSingleSalesforceObject|Uppercase|UpsertContact|UpsertData|UpsertDE|UpsertMSCRMRecord|URLEncode|V|WAT|WATP|WrapLongURL)\\(", 
+            },
+            "begin": "(?i:Add|AddMSCRMListMember|AddObjectArrayItem|AttachFile|AttributeValue|AuthenticatedEmployeeID|AuthenticatedEmployeeNotificationAddress|AuthenticatedEmployeeUserName|AuthenticatedEnterpriseID|AuthenticatedMemberID|AuthenticatedMemberName|BarCodeURL|Base64Decode|Base64Encode|BeginImpressionRegion|BuildOptionList|BuildRowSetFromString|BuildRowSetFromXML|Char|ClaimRow|ClaimRowValue|CloudPagesURL|Concat|ContentArea|ContentAreaByName|ContentBlockbyId|ContentBlockbyKey|ContentBlockbyName|ContentImagebyID|ContentImagebyKey|CreateMSCRMRecord|CreateObject|CreateSalesforceObject|CreateSmsConversation|DataExtensionRowCount|DateAdd|DateDiff|DateParse|DatePart|DecryptSymmetric|DeleteData|DeleteDE|DescribeMSCRMEntities|DescribeMSCRMEntityAttributes|Divide|Domain|Empty|EncryptSymmetric|EndImpressionRegion|EndSmsConversation|ExecuteFilter|ExecuteFilterOrderedRows|Field|Format|FormatCurrency|FormatDate|FormatNumber|GetSendTime|GetPortfolioItem|GetPublishedSocialContent|GetSocialPublishURL|GetSocialPublishURLByName|GetValue|GUID|HTTPGet|HTTPPost|HTTPPost2|HTTPRequestHeader|IIf|Image|IndexOf|InsertData|InsertDE|InvokeCreate|InvokeDelete|InvokeExecute|InvokePerform|InvokeRetrieve|InvokeUpdate|IsCHTMLBrowser|IsEmailAddress|IsNull|IsNullDefault|IsPhoneNumber|Length|LiveContentMicrositeURL|LocalDateToSystemDate|LongSFID|Lookup|LookupOrderedRows|LookupOrderedRowsCS|LookupRows|LookupRowsCS|Lowercase|MD5|MicrositeURL|Mod|Multiply|Now|Output|OutputLine|ProperCase|QueryParameter|RaiseError|Random|RatingStars|Redirect|RedirectTo|RegExMatch|Replace|ReplaceList|RequestParameter|RetrieveMSCRMRecords|RetrieveMSCRMRecordsFetchXML|RetrieveSalesforceJobSources|RetrieveSalesforceObjects|Row|RowCount|SetObjectProperty|SetSmsConversationNextKeyword|SetStateMSCRMRecord|SetValue|SHA1|SHA256|SHA512|StringToDate|StringToHex|Substring|Subtract|SystemDateToLocalDate|TransformXML|TreatAsContent|TreatAsContentArea|Trim|UpdateData|UpdateDE|UpdateMSCRMRecords|UpdateSingleSalesforceObject|Uppercase|UpsertContact|UpsertData|UpsertDE|UpsertMSCRMRecord|URLEncode|V|WAT|WATP|WrapLongURL)\\(",
             "patterns": [
                 {
                     "include": "#ampscript-system-strings-inline"
-                }, 
+                },
                 {
                     "include": "#ampscript-variables"
-                }, 
+                },
                 {
                     "include": "#ampscript-functions"
-                }, 
+                },
                 {
                     "include": "#ampscript-strings"
                 }
-            ], 
-            "end": "\\)", 
+            ],
+            "end": "\\)",
             "endCaptures": {
                 "0": {
                     "name": "support.function.ampscript"
                 }
-            }, 
+            },
             "name": "support.function.ampscript"
-        }, 
+        },
         "ampscript-variables": {
             "patterns": [
                 {
-                    "match": "\\@[a-zA-Z][A-Za-z0-9_]{0,}", 
-                    "comment": "Variable", 
+                    "match": "\\@[a-zA-Z][A-Za-z0-9_]{0,}",
+                    "comment": "Variable",
                     "name": "variable.language.ampscript"
-                }, 
+                },
                 {
-                    "match": "\\[[^\\s][a-zA-Z0-9_ ]+[^\\s]\\]", 
-                    "comment": "System or Substitution Placeholder", 
+                    "match": "\\[[^\\s][a-zA-Z0-9_ ]+[^\\s]\\]",
+                    "comment": "System or Substitution Placeholder",
                     "name": "variable.language.ampscript"
                 }
             ]
-        }, 
+        },
         "ampscript-inline": {
             "beginCaptures": {
                 "0": {
                     "name": "meta.embedded.block.ampscript"
                 }
-            }, 
-            "begin": "(%%=)", 
+            },
+            "begin": "(%%=)",
             "patterns": [
                 {
                     "include": "#ampscript-system-strings-inline"
-                }, 
+                },
                 {
                     "include": "#ampscript-variables"
-                }, 
+                },
                 {
                     "include": "#ampscript-functions"
-                }, 
+                },
                 {
                     "include": "#ampscript-strings"
                 }
-            ], 
-            "end": "(=%%)", 
+            ],
+            "end": "(=%%)",
             "endCaptures": {
                 "0": {
                     "name": "meta.embedded.block.ampscript"
                 }
-            }, 
+            },
             "name": "source.ampscript"
         }
     }
