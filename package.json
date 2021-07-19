@@ -1,7 +1,7 @@
 {
     "name": "ampscript-syntax-highlighter-vscode",
     "displayName": "AMPscript Syntax Highlighter (HTML)",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "author": {
         "name": "Adam Spriggs",
         "email": "wvpv@spmvs.com"
@@ -37,11 +37,13 @@
                 "language": "ampscript",
                 "scopeName": "text.html.ampscript",
                 "injectTo": [
-                    "text.html.basic",
-                    "meta.embedded.block.html",
-                    "meta.block.js",
-                    "source.js"
+                    "text.html"
                 ],
+                "embeddedLanguages": {
+                    "meta.embedded.block.ampscript": "ampscript"
+                    ,"meta.embedded.block.javascript": "source.js"
+
+                },
                 "path": "./syntaxes/AMPscript Syntax Highlighter (HTML).json"
             }
         ],
@@ -57,6 +59,6 @@
                 "language": "ampscript",
                 "path": "./snippets/ampscript-snippets.json"
             }
-        ]		
+        ]
     }
 }

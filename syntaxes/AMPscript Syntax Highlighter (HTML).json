@@ -6,7 +6,7 @@
     ],
     "scopeName": "text.html.ampscript",
     "version": "1.0.0",
-    "injectionSelector": "L:text.html L:meta.jsx.children.js L:meta.tag.js L:meta.jsx.children.js L:meta.tag.js L:meta.jsx.children.js L:meta.tag.without-attributes.js L:meta.jsx.children.js L:meta.tag.js L:meta.block.js L:source.js L:meta.embedded.block.html",
+    "injectionSelector" : "L:text.html",
     "keyEquivalent": "^~A",
     "foldingStopMarker": "(</(?i:(head|table|div|style|script|ul|ol|form|dl))>|\\})",
     "foldingStartMarker": "(<(?i:(head|table|div|style|script|ul|ol|form|dl))\\b.*?>|\\{)",
@@ -30,8 +30,12 @@
             "include": "#ampscript-functions"
         },
         {
+            "include": "#ssjs-block"
+        },
+        {
             "include": "text.html.basic"
         }
+
     ],
     "repository": {
         "ampscript-system-strings-block": {
@@ -50,13 +54,14 @@
             "match": "\\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\b",
             "name": "constant.numeric.ampscript"
         },
+
         "ampscript-block": {
             "beginCaptures": {
                 "0": {
                     "name": "meta.embedded.block.ampscript"
                 }
             },
-            "begin": "(%%\\[|<script\\s{0,}runat=[\"']{0,1}server[\"']{0,1}\\slanguage=[\"']{0,1}ampscript[\"']{0,1}>)",
+            "begin": "(?i)(%%\\[|<script\\s{0,}runat=[\"']{0,1}server[\"']{0,1}\\slanguage=[\"']{0,1}ampscript[\"']{0,1}>|<script\\s{0,}\\slanguage=[\"']{0,1}ampscript[\"']{0,1}runat=[\"']{0,1}server[\"']{0,1}>)",
             "patterns": [
                 {
                     "include": "#ampscript-comments"
@@ -83,13 +88,33 @@
                     "include": "#ampscript-language-elements"
                 }
             ],
-            "end": "\\]%%|</script>",
+            "end": "(\\]%%|</script>)",
             "endCaptures": {
                 "0": {
                     "name": "meta.embedded.block.ampscript"
                 }
             },
-            "name": "source.ampscript"
+            "name": "text.html.ampscript"
+        },
+        "ssjs-block": {
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.embedded.block.javascript"
+                }
+            },
+            "begin": "(?i)(%%\\[|<script\\s{0,}runat=[\"']{0,1}server[\"']{0,1}\\slanguage=[\"']{0,1}JavaScript[\"']{0,1}>|<script\\s{0,}\\slanguage=[\"']{0,1}JavaScript[\"']{0,1}runat=[\"']{0,1}server[\"']{0,1}>)",
+            "patterns": [
+                {
+                    "include": "source.js"
+                }
+            ],
+            "end": "(\\]%%|</script>)",
+            "endCaptures": {
+                "0": {
+                    "name": "meta.embedded.block.javascript"
+                }
+            },
+            "name": "meta.embedded.block.javascript.ssjs"
         },
         "ampscript-comments": {
             "begin": "/\\*",
@@ -224,7 +249,7 @@
                     "name": "meta.embedded.block.ampscript"
                 }
             },
-            "name": "source.ampscript"
+            "name": "text.html.ampscript"
         }
     }
 
